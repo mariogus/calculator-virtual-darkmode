@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" >
+        <div class="calculadora">
+        <a onclick="abrir()" href="#"><img src="settings (4) 1 (1).svg" alt=""></a>
+            <p  id="resultado"></p>
+            <!-- botoes-->
+            <table class="calcu">
+                <tr>
+                    <td><button  id="trocar"class="botao b9"onclick="insert('9'); soml()">9</button></td>
+                    <td><button  id="trocar"class="botao b8"onclick="insert('8'); soml()">8</button></td>
+                    <td><button id="trocar" class="botao b7"onclick="insert('7'); soml()">7</button></td>
+                    <td><button class="botao bd"onclick="insert('/'); soml()"><p>÷</p></button></td>
+    
+                </tr>
+                <tr>
+                    <td><button class="botao b6" onclick="insert('6'); soml()">6</button></td>
+                    <td><button class="botao b5"onclick="insert('5'); soml()">5</button></td>
+                    <td><button class="botao b4"onclick="insert('4'); soml()">4</button></td>
+                    <td><button class="botao bs"onclick="insert('+'); soml()"><P>+</P></button></td>  
+                </tr>
+                <tr>
+                    <td><button class="botao b3"onclick="insert('3'); soml()">3</button></td>
+                    <td><button class="botao b2"onclick="insert('2'); soml()">2</button></td>
+                    <td><button class="botao b1"onclick="insert('1'); soml()">1</button></td>
+                    <td><button class="botao bm"onclick="insert('-'); soml()"><P>-</P></button></td>  
+                </tr>
+                <tr>
+                    <td><button class="botao amarelo-btn"onclick="clean(); soml()">ac</button></td>
+                    <td><button class="botao b0"onclick="insert('0'); soml(); soml()">0</button></td>
+                    <td><button class="botao amarelo-btn bt"onclick="caucular(); soml()"><P>=</P></button></td>
+                    <td><button class="botao bmu"onclick="insert('*'); soml()" ><svg width="15"  height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 2.14275L12.857 0L7.5 5.35725L2.14275 0L0 2.14275L5.357 7.5L0 12.8573L2.14275 15L7.5 9.64275L12.857 15L15 12.8573L9.6425 7.5L15 2.14275Z" fill="" class="ssvg"/>
+</svg></button></td>  
+                </tr>
+            </table>
+            </div>
+    
+    <div id="pop-up">
+        <div class="cor cor2">
+            <a href="#" onclick="fechar()"><?xml version="1.0" standalone="no"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                <svg class="seta svg" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                 width="64px" height="64px" viewBox="0 0 64.000000 64.000000"
+                 preserveAspectRatio="xMidYMid meet">
+                
+                <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                fill="#000000" stroke="none">
+                <path d="M162 517 c-20 -22 -22 -33 -22 -158 0 -183 -4 -179 183 -179 182 0
+                177 -5 177 180 0 184 4 180 -181 180 -129 0 -137 -1 -157 -23z m190 -84 c-6
+                -10 -24 -31 -41 -47 l-31 -30 42 -43 c23 -23 40 -45 37 -48 -3 -2 -27 18 -54
+                45 l-49 50 49 50 c49 50 65 58 47 23z"/>
+                </g>
+                </svg></a>
+            <p class="ai">configurações</p>
+            <div class="temas">
+               
+
+               <p class="tema.p">tema</p>
+               <div class="botoes">
+    
+               </div>
+               <label class="toggle">
+                <input id="check" class="toggle-checkbox btn" id="tema"  id="temaa"   type="checkbox">
+                <div class="toggle-switch"></div>
+                
+              </label>
+              <p class="som">som</p>
+              
+              
+              <label class="toggle">
+                <input class="toggle-checkbox btn" id="som"   type="checkbox" >
+                <div class="toggle-switch popo"></div>
+                 </div>
+             
+              </label>
+
+              <a href="#" class="suporte-p" onclick="openSuporte()"><button class="suporte"><p class="suporte-p">suporte </p></button></a>
+            </div>
+            </div>
+            <div class="suuporte">
+
+                <a href="#" onclick="closeSuporte()"><?xml version="1.0" standalone="no"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                     "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                    <svg class="setaa svg" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="64px" height="64px" viewBox="0 0 64.000000 64.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    
+                    <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                    fill="#000000" stroke="none">
+                    <path d="M162 517 c-20 -22 -22 -33 -22 -158 0 -183 -4 -179 183 -179 182 0
+                    177 -5 177 180 0 184 4 180 -181 180 -129 0 -137 -1 -157 -23z m190 -84 c-6
+                    -10 -24 -31 -41 -47 l-31 -30 42 -43 c23 -23 40 -45 37 -48 -3 -2 -27 18 -54
+                    45 l-49 50 49 50 c49 50 65 58 47 23z"/>
+                    </g>
+                    </svg>
+                    </a>
+                <p class="p-suporte">suporte</p>
+
+
+                <div class="master">
+                   <textarea name="" class="textarea" style="resize: none;" id="" cols="30" rows="10" placeholder="Descreva seu problema"></textarea>
+                    <div class="imagem">
+                        <svg id="popopo" class="svg" class="img" fill="#ffffff" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#ffffff" d="M11.375 8.04183C12.3194 7.49656 12.3194 6.13337 11.375 5.58809L2.69305 0.575567C1.3495 -0.200132 -0.0842056 1.43725 0.86214 2.66659L3.39033 5.9508C3.78245 6.46018 3.78245 7.16974 3.39033 7.67912L0.862143 10.9633C-0.0842028 12.1927 1.3495 13.8301 2.69305 13.0544L11.375 8.04183Z" fill="#3E3758"/>
+                            </svg>
+                        
+                    </div>
+
+                </div>
+
+
+
+
+               
+                
+
+                <a href="#"> <div class="termos">
+                <p class="ter">Termos de politica e privacidade</p>
+              </div>
+              </a>
+              <a href="#"><div class="dados">
+                <p>Dados do aplicativo</p>
+              </div>
+              </a>
+        </div>
+                
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@700&family=Roboto:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+body {
+    
+    --texto-claro: #3E3758;
+    --fundo-claro: #B3ADCB;
+  
+    /* cores de fundo */
+    --claro: #3E3758;
+    --botao-claro: #E2E2E2;
+    --borda-claro: #2B2640;
+    --img: #3e3758;
+    --imagens:#3E3758;
+  
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    background-color: var(--claro);
+  }
+  .dark {
+    --texto-claro: #B3ADCB;
+    --fundo-claro: #3E3758;
+    --claro: #686087;
+    --botao-claro: #3E3758;
+    --borda-claro: #B3ADCB;
+    --img: #B3ADCB;
+    --imagens:#B3ADCB;
+  }
+#pop-up{
+    display: none;
+    
+  }
+  .calculadora {
+    /* calculadora claro */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+    gap: 10px;
+  
+    position: relative;
+    width: 300px;
+    height: 381px;
+  
+    /* roxo 2 */
+  
+    background: var(--fundo-claro);
+    border-radius: 30px;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  .setting-img {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+    margin-left: 10px;
+  
+  }
+  .ssvg{
+    fill: var(--texto-claro);
+  }
+  .botao {
+    box-sizing: border-box;
+  
+    width: 60px;
+    height: 60px;
+  
+    /* roxo 1 */
+  
+    background: var(--botao-claro);
+    /* roxo 5 */
+  
+    border: 3px solid var(--borda-claro);
+    /* sombra botões claro */
+  
+    box-shadow: 4px 4px 0px #524545;
+    border-radius: 10px;
+  
+    /* Inside auto layout */
+    align-items: center;
+    text-align: center;
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-size: 20px;
+    margin-left: 7px;
+    margin-top: 9px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    transform: translateY(-10px);
+    color: var(--texto-claro);
+    padding-left: 1.5px;
+    
+  }
+  .botao:active {
+    transform: translateY(-3px); 
+    transition: 10ms; 
+  }
+  .bt p{
+    margin-top: -5px;
+  }
+  #resultado {
+  
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 0px px;
+      margin-left: 75px;
+      width: 190px;
+      height: 56px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 52px;
+      margin-top: -98%;
+      margin-left: 25%;
+  
+      /* roxo 1 */
+  
+      background: var(--botao-claro);
+      /* roxo 5 */
+  
+      border: 3px solid var(--borda-claro);
+      box-shadow: 4px 4px 0px #524545;
+      border-radius: 10px;
+  
+      /* Inside auto layout */
+  
+      flex: none;
+      text-align: right;
+      padding: 5px;
+      /* visor */
+  
+  
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 0px 17px;
+  
+  width: 203px;
+  height: 56px;
+  
+  /* roxo 1 */
+  
+  background: var(--botao-claro);
+  /* roxo 5 */
+  
+  border: 3px solid var(--borda-claro);
+  box-shadow: 4px 4px 0px #524545;
+  border-radius: 10px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  
+  
+    width: 203px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  
+  color: var(--texto-claro);
+  
+  }
+  
+  
+  .amarelo-btn {
+      background: #FCFF6B;
+      color: black;
+      /* botão ac */
+
+
+box-sizing: border-box;
+
+width: 60px;
+height: 60px;
+
+/* Amarelo 2 */
+
+background: #FCFF6B;
+/* roxo 5 */
+
+border: 3px solid #2B2640;
+/* sombra botões escuro */
+
+box-shadow: 4px 4px 0px #221E1E;
+border-radius: 10px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+      
+  }
+  .calculadora a {
+    margin-right: 70%;
+    margin-top: 2.75%;
+    background: #FCFF6B;
+    margin-right: 70%;
+    margin-top: 3%;
+    background: #FCFF6B;
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    isolation: isolate;
+
+    width: 56px;
+    height: 56px;
+
+    /* Amarelo 2 */
+
+    background: #FCFF6B;
+border: 3px solid #2B2640;
+    
+    /* sombra botões escuro */
+
+    box-shadow: 4px 4px 0px #221E1E;
+    border-radius: 15px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .configuracoes {
+  
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 17px;
+  
+    width: 300px;
+    height: 381px;
+  
+    /* roxo 4 */
+  
+    background: #4e2bcc;
+    border-radius: 30px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: -50%;
+  }
+  .cor{
+    position: relative;
+  width: 300px;
+  height: 381px;
+  background: var(--fundo-claro);
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  }
+  
+  .seta{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .config{
+    position: absolute;
+    left: 23%;
+    top: 6%;
+  }
+  .temas{
+    position: absolute;
+     box-sizing: border-box;
+  
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 0px 24px;
+  gap: 8px;
+  
+  width: 260px;
+  height: 80px;
+  
+  /* roxo 4 */
+  
+  border: 3px solid var(--borda-claro);
+  /* sombra configurações */
+  
+  
+  border-radius: 10px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-top: 30%;
+  left: 6%;
+  }
+  .temas p{
+     
+     margin-left: -70%;
+     font-size: 20px;
+     
+  /* configurações texto */
+  
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  
+  /* roxo 2 */
+  
+  
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+   
+     
+  }
+  .som{
+   margin-left: -5px;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100vh;
+    background-color:var(--claro);
+    transition: background .5s;
+  }
+  .seeta{
+    width: 56px;
+    height: 56px;
+  }
+  .som p{
+    position: absolute;
+    margin-top: 57%;
+    left: 13%;
+    font-size: 20px;
+  }
+  
+  .suporte {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    gap: 8px;
+    
+    width: 260px;
+    height: 41px;
+    
+    /* roxo 2 */
+    
+    border: 3px solid var(--borda-claro);
+    border-radius: 10px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-left: 6%;
+    margin-top: 50%;
+    
+    
+  }
+  *,
+  *:before,
+  *:after {
+  box-sizing: border-box;
+  }
+  .toggle {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 70%;
+  }
+  
+  .toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 34px;
+    height: 23px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+    /* Frame 2 */
+  
+  
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  
+  width: 26px;
+  height: 15px;
+  
+  /* roxo 1 */
+  
+  background: #E2E2E2;
+  border-radius: 30px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  }
+  .toggle-switch:before, .toggle-switch:after {
+    content: "";
+  }
+  .toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: left 0.25s;
+    
+  width: 15px;
+  height: 15px;
+  
+  /* roxo 5 */
+  
+  background: #2B2640;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  }
+  
+  
+  .toggle-checkbox:checked + .toggle-switch {
+    background-color: #2B2640;
+  }
+  .toggle-checkbox:checked + .toggle-switch:before {
+    left: 14px;
+    background-color: white;
+  }
+  
+  .toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .botoes{
+    
+    margin-top: -15%;
+    margin-right: 500%;
+  }
+  
+  .ai{
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 6%;
+    
+    
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--texto-claro);
+  
+    
+  
+  
+  }
+  .suporte{
+    margin-top: 130%;
+    position: absolute;
+    background: var(--fundo-claro);
+   cursor: pointer;
+  }
+  .popo{
+    margin-top: -13%;
+    right: 10%;
+    position: absolute;
+  }
+  .popyy{
+    /* Polygon 1 */
+  
+  
+  width: 19.63px;
+  height: 17px;
+  
+  /* roxo 2 */
+  
+  background: var(--fundo-claro);
+  border-radius: 1.41667px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  
+  }
+  .bmu{
+    font-size: 30px;
+  }
+  .suuporte{
+    /* suporte */
+    
+    
+    /* Auto layout */
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0px;
+    gap: 10px;
+    
+    width: 300px;
+    height: 381px;
+    
+    /* roxo 4 */
+    
+    background: var(--claro);
+    border-radius: 30px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .suuporte{
+      /* suporte */
+    
+    /* suporte */
+    
+    
+    /* Auto layout */
+    
+    display: none;
+    
+    align-items: center;
+    padding: 5px 0px;
+    gap: 10px;
+    
+    width: 300px;
+    height: 381px;
+    
+    /* roxo 2 */
+    
+    background: var(--fundo-claro);
+    border-radius: 30px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 0px;
+    }
+    .suuporte a{
+      text-decoration: none;
+      color: var(--texto-claro);
+    
+    }
+    
+    .setaa{
+      
+      
+      margin-left: 4%;
+      margin-top: 2%;
+    }
+    .p-suporte{
+      font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    /* roxo 4 */
+    
+    color:var(--texto-claro);
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: -20%;
+    margin-left: 35%;
+    }
+    .master{
+      position: relative;
+    /* descreva seu problema  */
+    
+    
+    box-sizing: border-box;
+    
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 257px;
+    height: 127.63px;
+    
+    /* roxo 4 */
+    
+    border: 3px solid var(--borda-claro);
+    border-radius: 10px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 8%;
+    top: 17px;
+    
+    }
+    .master textarea{
+      background: var(--fundo-claro);
+      border: none;
+      
+      box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+        
+        margin-right: -3%;
+    
+    }
+    .master textarea::placeholder{
+      position: relative;
+      /* descreva seu problema  */
+    
+    
+    box-sizing: border-box;
+    
+    /* Auto layout */
+    margin-right: -4%;
+    display: flex;
+    
+    
+    width: 212px;
+    height: 19px;
+    
+    
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    
+    /* roxo 4 */
+    
+    color: var(--texto-claro);
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+   
+    
+    /* roxo 4 */
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    }
+    .img{
+      /* Polygon 1 */
+    
+    
+    width: 15.63px;
+    height: auto;
+    
+    /* roxo 4 */
+    
+    
+    border-radius: 1.41667px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    }
+    
+    .termos{
+      
+          box-sizing: border-box;
+      
+          /* Auto layout */
+          
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 5px 0px;
+          gap: 8px;
+          
+          width: 260px;
+          height: 41px;
+          
+          /* roxo 2 */
+          
+          border: 3px solid var(--borda-claro);
+          border-radius: 10px;
+          
+          /* Inside auto layout */
+          
+          flex: none;
+          order: 2;
+          flex-grow: 0;
+          margin-left: 8%;
+          margin-top: 9%;
+          
+          
+    }
+        *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      .termos p{
+        font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 21px;
+      /* identical to box height */
+      
+      text-align: center;
+      
+      /* roxo 4 */
+      
+      color: var(--texto-claro);
+      
+      
+      /* Inside auto layout */
+      
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      }
+      .dados {
+        
+        box-sizing: border-box;
+      
+        /* Auto layout */
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0px;
+        gap: 8px;
+        
+        width: 260px;
+        height: 41px;
+        
+        /* roxo 2 */
+        
+        border: 3px solid var(--borda-claro);
+        border-radius: 10px;
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        margin-left: 8%;
+        margin-top: 4%;
+        
+        
+      }
+      *,
+      *:before,
+      *:after {
+      box-sizing: border-box;
+      }
+      .dados p{
+        font-family: 'Chakra Petch';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+        /* identical to box height */
+        
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        /* roxo 4 */
+        
+        color: var(--texto-claro);
+        
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin-top: 5px;
+        }
+        
+        #poly{
+          margin-top: 12%;
+        }
+        .suporte-p{
+          text-decoration: none;
+          /* suporte */
+        
+        
+        width: 86px;
+        height: 31px;
+        
+        /* configurações texto */
+        
+        font-family: 'Chakra Petch';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        
+        /* roxo 4 */
+        
+        color: var(--texto-claro);
+        
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        .som{
+          margin-right: 8px;
+          color: var(--texto-claro);
+        
+          
+        }
+        .calcu{
+          margin-top: 2%;
+          margin-right: 1%;
+        }
+        .ssvg path{
+          fill:black ;
+        }
+        .bs p{
+          margin-top: -10%;
+        }
+        .bm p{
+            margin-top: -5%;
+            font-size: 42px;
+        }
+        .bd p{
+          margin-top: -10%;
+        }
+        .temas{
+          color: var(--texto-claro);
+        
+        }
+        .x{
+            margin-top: 9%;
+            font-size: 40px;
+        }
+  #popopo {
+ fill: var(--img);
+  }
+  .svg path{
+    fill: var(--img);
+  }
